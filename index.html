@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Currency Converter</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="bg-overlay"></div>
+
+  <div class="converter animate-card">
+    <h1>💱 Currency Converter</h1>
+    <p class="subtitle">Real-time World Currency Converter</p>
+
+    <input type="number" id="amount" placeholder="Enter amount">
+
+    <div class="currency-row">
+      <select id="fromCurrency"></select>
+      <span class="swap">→</span>
+      <select id="toCurrency"></select>
+    </div>
+
+    <div class="power">
+      <p>⚡ Powerful Currencies</p>
+      <div class="power-btns">
+        <button onclick="quickSet('USD')">USD</button>
+        <button onclick="quickSet('EUR')">EUR</button>
+        <button onclick="quickSet('GBP')">GBP</button>
+        <button onclick="quickSet('JPY')">JPY</button>
+        <button onclick="quickSet('BTC')">BTC</button>
+      </div>
+    </div>
+
+    <button id="convertBtn" class="convert-btn">Convert</button>
+
+    <div id="result" class="result hidden"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background:
+    url("https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3")
+    center/cover no-repeat;
+  overflow: hidden;
+}
+
+.bg-overlay {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(90,70,180,.85), rgba(120,90,200,.85));
+}
+
+.converter {
+  width: 370px;
+  padding: 25px;
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(18px);
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  box-shadow: 0 20px 40px rgba(0,0,0,.35);
+  z-index: 2;
+}
+
+.animate-card {
+  animation: floatIn 1.2s ease;
+}
+
+@keyframes floatIn {
+  from { opacity: 0; transform: translateY(40px) scale(.95); }
+  to { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+h1 {
+  font-size: 24px;
+}
+
+.subtitle {
+  font-size: 13px;
+  opacity: .85;
+  margin-bottom: 18px;
+}
+
+input, select {
+  width: 100%;
+  padding: 11px;
+  margin: 10px 0;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 15px;
+}
+
+.currency-row {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.swap {
+  font-size: 18px;
+}
+
+.power {
+  margin-top: 10px;
+}
+
+.power p {
+  font-size: 13px;
+  opacity: .9;
+  margin-bottom: 6px;
+}
+
+.power-btns {
+  display: flex;
+  justify-content: space-between;
+}
+
+.power-btns button {
+  flex: 1;
+  margin: 0 3px;
+  padding: 6px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: rgba(255,255,255,.25);
+  color: #fff;
+  transition: .3s;
+}
+
+.power-btns button:hover {
+  background: #ff9966;
+  transform: scale(1.1);
+}
+
+.convert-btn {
+  width: 100%;
+  margin-top: 16px;
+  padding: 13px;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  cursor: pointer;
+  color: #fff;
+  background: linear-gradient(135deg, #ff9966, #ff5e62);
+  transition: .3s;
+}
+
+.convert-btn:hover {
+  transform: translateY(-2px) scale(1.03);
+}
+
+.result {
+  margin-top: 18px;
+  padding: 12px;
+  border-radius: 12px;
+  background: rgba(255,255,255,.25);
+  font-size: 18px;
+  font-weight: 600;
+  animation: fadeUp .6s ease;
+}
+
+.hidden {
+  display: none;
+}
+
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
